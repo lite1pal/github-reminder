@@ -4,7 +4,7 @@ require_relative "github_checker"
 
 checker = GithubChecker.new
 
-if !checker.pushed_today?
+if checker.pushed_today?
   puts "Already pushed today."
   puts "Latest push: #{checker.latest_push}"
   exit
