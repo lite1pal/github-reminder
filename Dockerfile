@@ -7,4 +7,4 @@ RUN bundle install
 
 COPY . .
 
-CMD ["bundle", "exec", "ruby", "check.rb"]
+CMD ["tail", "-f", "/dev/null"]
