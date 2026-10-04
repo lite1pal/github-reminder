@@ -14,7 +14,7 @@ puts "No push today. Sending reminder..."
 
 uri = URI(ENV.fetch("NTFY_URL"))
 
-request = Net::HTTP::Post.new(uri)
+request = Net::HTTP::Post.new(uri, initheader = {'X-Email' => "dev@denistarasenko.com"})
 request["Title"] = "GitHub reminder"
 request.body = "You haven't pushed anything to GitHub today."
 
